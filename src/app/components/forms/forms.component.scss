@@ -117,3 +117,24 @@
     }
   }
 }
+@media screen and (min-width: 520px) {
+  .form {
+    &__buttons {
+      display: flex;
+      flex-direction: row;
+
+      .btn {
+        margin-bottom: 1rem;
+        min-width: 25%;
+      }
+    }
+
+    &__filter__check {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0;
+      margin-top: 2rem;
+    }
+  }
+}

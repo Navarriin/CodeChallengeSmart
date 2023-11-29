@@ -1,0 +1,119 @@
+.form {
+  margin: 0 auto;
+  border: 2px solid var(--border-grey);
+  border-radius: 6px;
+
+  font-family: "Gotham";
+  color: var(--medium-grey);
+
+  width: 90%;
+  height: auto;
+
+  h3 {
+    font-weight: 400;
+    font-size: 20px;
+
+    padding: 15px 0 10px 5px;
+    width: 95%;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border-grey);
+  }
+
+  &__icon {
+    margin: 20px 0 5px 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      height: 30%;
+      width: 30px;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    width: 95%;
+    margin: 0 auto;
+
+    &__input {
+      display: flex;
+      justify-content: space-between;
+
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border-grey);
+
+      &__name {
+        display: flex;
+        gap: 0.4rem;
+
+        input {
+          cursor: pointer;
+        }
+      }
+    }
+    &__input:first-child {
+      padding-top: 1.2rem;
+    }
+
+    &__check {
+      display: flex;
+      flex-direction: column;
+
+      margin: 0 auto;
+      margin-top: 2rem;
+      gap: 1rem;
+
+      color: var(--dark-grey);
+
+      p {
+        span {
+          font-weight: 900;
+        }
+      }
+
+      &__name {
+        display: flex;
+        gap: 0.4rem;
+
+        input {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    height: auto;
+    gap: 1rem;
+
+    .btn {
+      font-size: 16px;
+      font-weight: 900;
+
+      padding: 0.6rem;
+      min-width: 80%;
+      border: none;
+      border-radius: 4px;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    .btn:last-child {
+      margin-bottom: 1rem;
+    }
+
+    .primary {
+      background-color: var(--yellow);
+    }
+    .secondary {
+      border: 1px solid var(--light-grey);
+    }
+  }
+}

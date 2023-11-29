@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 100vw;
+
+  &__logo {
+    background-color: black;
+
+    height: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 100px;
+      width: 200px;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 90%;
+    gap: 1rem;
+
+    font-family: "Gotham";
+    color: var(--dark-grey);
+
+    &__risk {
+      display: flex;
+      height: 10px;
+      width: 5.2rem;
+
+      background-color: var(--dark-grey);
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 1.6rem;
+    }
+  }
+}

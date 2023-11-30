@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { GetUnitsService } from '../../services/get-units.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-forms',
@@ -15,9 +17,11 @@ export class FormsComponent {
     showClosed: new FormControl(),
   });
 
-  constructor() {}
+  constructor(private unitService: GetUnitsService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.unitService.getAllUnits().subscribe((data) => console.log(data));
+  }
 
   onSubmit(): void {
     console.log(this.formGroup.value);

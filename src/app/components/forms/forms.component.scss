@@ -20,7 +20,7 @@
   }
 
   &__icon {
-    margin: 20px 0 5px 40px;
+    margin: 10px 0px 0px 10px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -119,6 +119,10 @@
 }
 @media screen and (min-width: 520px) {
   .form {
+    &__icon {
+      margin: 20px 0 5px 40px;
+    }
+
     &__buttons {
       display: flex;
       flex-direction: row;

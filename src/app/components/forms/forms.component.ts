@@ -45,6 +45,8 @@ export class FormsComponent {
 
   onClean(): void {
     this.formGroup.reset();
-    this.filteredResults = this.results;
+    this.filteredResults = this.results.filter(
+      (location) => location.opened === true
+    );
   }
 }

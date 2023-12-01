@@ -72,7 +72,7 @@ export class FilterUnitsService {
     return false;
   }
 
-  filter(results: Location[], showClosed: boolean, hour: string) {
+  filter(results: Location[], showClosed: boolean, hour: string): Location[] {
     let intermediateResults = results;
 
     if (!showClosed) {

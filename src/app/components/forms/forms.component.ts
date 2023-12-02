@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 // Minha interface
 import { Location } from '../../types/units-response.interface';
@@ -14,6 +14,8 @@ import { FilterUnitsService } from '../../services/filter-units.service';
   styleUrl: './forms.component.scss',
 })
 export class FormsComponent {
+  @Output() submitEvent = new EventEmitter();
+
   results: Location[] = [];
   filteredResults: Location[] = [];
 
@@ -42,6 +44,7 @@ export class FormsComponent {
       hour
     );
     this.unitService.setFilteredUnits(this.filteredResults);
+    this.submitEvent.emit();
   }
 
   onClean(): void {

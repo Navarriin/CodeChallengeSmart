@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1rem;
+
+  background-color: var(--dark-grey);
+
+  font-family: "Gotham";
+
+  img {
+    margin-top: 50px;
+    height: 50px;
+    width: 150px;
+  }
+
+  p {
+    font-size: 18px;
+
+    color: white;
+    padding-bottom: 60px;
+  }
+}

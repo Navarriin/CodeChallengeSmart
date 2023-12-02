@@ -15,6 +15,10 @@
   margin: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 @font-face {
   font-family: "Gotham";
   src: url("assets/fonts/Gotham/gotham-light.woff2") format("truetype");

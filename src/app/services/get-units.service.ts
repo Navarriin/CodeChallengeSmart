@@ -1,7 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { UnitsResponse } from '../types/units-response.interface';
+import { HttpClient } from '@angular/common/http';
+// Imports da rxjs
+import { BehaviorSubject, Observable } from 'rxjs';
+// Minhas interfaces
+import { Location, UnitsResponse } from '../types/units-response.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -10,9 +12,29 @@ export class GetUnitsService {
   readonly apiUrl =
     'https://test-frontend-developer.s3.amazonaws.com/data/locations.json';
 
-  constructor(private http: HttpClient) {}
+  private allUnitsSubject: BehaviorSubject<Location[]> = new BehaviorSubject<
+    Location[]
+  >([]);
+  private allUnits$: Observable<Location[]> =
+    this.allUnitsSubject.asObservable();
+  private filteredUnits: Location[] = [];
 
-  getAllUnits(): Observable<UnitsResponse> {
-    return this.http.get<UnitsResponse>(this.apiUrl);
+  constructor(private http: HttpClient) {
+    this.http.get<UnitsResponse>(this.apiUrl).subscribe((data) => {
+      this.allUnitsSubject.next(data.locations);
+      this.filteredUnits = data.locations;
+    });
+  }
+
+  getAllUnits(): Observable<Location[]> {
+    return this.allUnits$;
+  }
+
+  getFilteredUnits() {
+    return this.filteredUnits;
+  }
+
+  setFilteredUnits(value: Location[]) {
+    this.filteredUnits = value;
   }
 }

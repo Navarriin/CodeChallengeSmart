@@ -1,27 +1,37 @@
-# CodeChallengeSmart
+# :muscle: CodeChallengeSmart - Gabriel Navarro
+![Static Badge](https://img.shields.io/badge/TypeScript-yellow)
+![Static Badge](https://img.shields.io/badge/Angular-yellow)
+![Static Badge](https://img.shields.io/badge/SCSS-yellow)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
+![Print da tela inicial do projeto](https://github.com/Navarriin/CodeChallengeSmart/assets/139160874/97c48455-d55a-4852-9c8a-03273580033d)
+---
+![Print das unidades carregadas após busca](https://github.com/Navarriin/CodeChallengeSmart/assets/139160874/9ae19f12-731f-47ff-bda2-3668092892e8)
 
-## Development server
+## :smile: Descrição 
+Projeto baseado em um desafio antigo da SmartFit, no qual usei para praticar e aprimorar minhas habilidades, principalmente com TypeScript. Neste projeto, você consegue filtrar as unidades para saber qual está aberta para você treinar.   
+Baseado na API fictícia proposta pelo desafio.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Segue link do desafio:   
+https://github.com/bioritmo/front-end-code-challenge-smartsite
 
-## Code scaffolding
+### Segue link da aplicação no ar:
+https://code-challenger-smart.netlify.app/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## :pushpin: Como Utilizar
 
-## Build
+### 1. Clone o repositório
+```
+git clone https://github.com/Navarriin/CodeChallengeSmart.git
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 2. Instale as dependencias
+```
+npm install
+```
 
-## Running unit tests
+### 3. Suba a aplicação
+```
+ng serve
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Após realizar esta sequência de passos a aplicação já estará pronta para ser utilizada na porta -> http://localhost:4200/
